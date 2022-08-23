@@ -65,7 +65,7 @@
 ?>
 <h2>accesso: 
     <?php if ($access){
-            echo 'garantito';
+            echo 'acconsentito';
         }
         else
         echo 'negato';
@@ -91,7 +91,7 @@
 <h1>snak 5</h1>
 <?php 
     $text='ciao sono luca. ho 24 anni. sono di roma.';
-    $new[]=(explode('.', $text));
+    $new =(explode('.', $text));
     var_dump($new);
 ?>
 
@@ -99,6 +99,66 @@
 
 
 ?>
+
+
+<h1>snak 7</h1>
+<?php 
+
+$alunni=[
+    [
+        'nome'=>'Stefano',
+        'cognome'=>'bho',
+        $voto=[
+            10,
+            10,
+            8,
+            7,
+        ]
+    ],
+    [
+        'nome'=>'Giacomo',
+        'cognome'=>'bho',
+        $voto=[
+            10,
+            10,
+            8,
+            7
+        ]
+    ],
+    [
+        'nome'=>'Lucia',
+        'cognome'=>'bho',
+        $voto=[
+            10,
+            10,
+            8,
+            7
+        ]
+    ],
+    [
+        'nome'=>'Paolo',
+        'cognome'=>'bho',
+        $voto=[
+            10,
+            10,
+            8,
+            7,
+            5
+        ]
+    ],
+]
+?>
+
+<?php for ($a=0; $a < count($voto[0]); $a++) { 
+       echo;
+    } ?>
+
+<?php for ($i=0; $i < count($alunni); $i++){ ?>
+    
+    <p> <?php echo $alunni[$i]['nome']. ' ' .$alunni[$i]['cognome']; ?> </p>  
+    
+<?php } ?>
+
 
 </body>
 </html>
