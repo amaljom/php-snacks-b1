@@ -108,9 +108,9 @@ $alunni=[
     [
         'nome'=>'Stefano',
         'cognome'=>'bho',
-        $voto=[
+        'voto'=>[
             10,
-            10,
+            6,
             8,
             7,
         ]
@@ -118,8 +118,8 @@ $alunni=[
     [
         'nome'=>'Giacomo',
         'cognome'=>'bho',
-        $voto=[
-            10,
+        'voto'=>[
+            5,
             10,
             8,
             7
@@ -128,17 +128,17 @@ $alunni=[
     [
         'nome'=>'Lucia',
         'cognome'=>'bho',
-        $voto=[
-            10,
-            10,
-            8,
+        'voto'=>[
+            4,
+            2,
+            6,
             7
         ]
     ],
     [
         'nome'=>'Paolo',
         'cognome'=>'bho',
-        $voto=[
+        'voto'=>[
             10,
             10,
             8,
@@ -149,14 +149,17 @@ $alunni=[
 ]
 ?>
 
-<?php for ($a=0; $a < count($voto[0]); $a++) { 
-       echo;
-    } ?>
 
-<?php for ($i=0; $i < count($alunni); $i++){ ?>
+
+<?php for ($i=0; $i < count($alunni); $i++){  
+    $somma=0; ?>
     
     <p> <?php echo $alunni[$i]['nome']. ' ' .$alunni[$i]['cognome']; ?> </p>  
     
+    <?php for ($a=0; $a < count($alunni[$i]['voto']); $a++) { 
+       $somma= $somma+ $alunni[$i]['voto'][$a];
+    } ?>
+    <?php echo 'la media dei voti è:'.' '. $somma/count($alunni[$i]['voto']) ?>
 <?php } ?>
 
 
